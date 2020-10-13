@@ -4,8 +4,8 @@ const path = require('path');
 const dir = process.cwd();
 function getDirectoryContents(files, currentDir, query) {
     const data = [];
-    files.forEach( (file) => {
-        if (isDirectory(currentDir,file)) {
+    files.forEach((file) => {
+        if (isDirectory(currentDir, file)) {
             data.push({ name: file, isDirectory: true, path: path.join(query, file) });
         }
         else {
